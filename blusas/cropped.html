@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fashion and Magic</title>
+    <style>
+        /* Resetando algumas margens e paddings padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #7b0b50; /* Rosa claro */
+            color: #ffffff; /* Rosa mais escuro */
+            line-height: 1.6;
+        }
+        /* Banner */
+
+
+
+
+        /* Cabeçalho e Navegação */
+        header {
+            background: #7b0b50; /* Rosa suave */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav {
+            margin-top: 10px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Banner */
+        .banner {
+            width: 100%;
+            height: 300px;
+            background: url('fundo.jpg') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: #f7c9e6; /* Cor de fundo caso a imagem não carregue */
+        }
+
+        .banner h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Seção de produtos */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px #f7a7c5; /* Rosa suave */
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .product h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            color: #7b0b50;
+        }
+
+        .product p {
+            color: #9b4d72; /* Rosa escuro para o preço */
+            margin-bottom: 15px;
+        }
+
+        .product button {
+            background-color: #f59bbd; /* Rosa claro vibrante */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #f39b9d; /* Rosa mais escuro */
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #f7a7c5; /* Rosa suave */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            .banner h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <!-- Cabeçalho com Barra de Navegação -->
+    <header>
+        <h1>Fashion and Magic</h1>
+        <nav>
+            <a href="/TCC 2A grazi/index.html">Home</a>
+            <a href="/coleções/coleções.html">Produtos</a>
+            
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h1 class="animacao-lingeries">Blusas</h1>
+    </div>
+
+   
+
+    <!-- Catálogo de Produtos -->
+    <section class="products">
+        <div class="product">
+            <img src="croped de croche.jpg" alt="Produto 1">
+            <h2>Cropped de Crochê</h2>
+            <p>R$ 79,99</p>
+            <button onclick="adicionarAoCarrinho('Cropped de Crochê', 79.99)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="croped feminino.jpg" alt="Produto 2">
+            <h2>Cropped Feminino</h2>
+            <p>R$ 119,99</p>
+            <button onclick="adicionarAoCarrinho('Cropped Feminino', 119.99)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Blusa Verão.jpg" alt="Produto 3">
+            <h2>Blusa Verão</h2>
+            <p>R$ 159,99</p>
+            <button onclick="adicionarAoCarrinho('Blusa Verão', 159.99)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Blusa Elegante.jpg" alt="Produto 4">
+            <h2>Blusa Elegante</h2>
+            <p>R$ 199,99</p>
+            <button onclick="adicionarAoCarrinho('Blusa Elegante', 199.99)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Camisa Jeans.jpg" alt="Produto 7">
+            <h2>Camisa Jeans</h2>
+            <p>R$ 99,99</p>
+            <button onclick="adicionarAoCarrinho('Camisa Jeans', 99.99)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Blusa de Tricô.jpg" alt="Produto 8">
+            <h2>Blusa de Tricô</h2>
+            <p>R$ 79,99</p>
+            <button onclick="adicionarAoCarrinho('Blusa de Tricô', 79.99)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Blusão de Moletão.jpg" alt="Produto 9">
+            <h2>Blusão de Moletom</h2>
+            <p>R$ 89,99</p>
+            <button onclick="adicionarAoCarrinho('Blusão de Moletom', 89.99)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Blusa de Algodão.jpg" alt="Produto 12">
+            <h2>Camisa de Algodão</h2>
+            <p>R$ 79,99</p>
+            <button onclick="adicionarAoCarrinho('Camisa de Algodão', 79.99)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Suéter Quente.jpg" alt="Produto 15">
+            <h2>Suéter Quente</h2>
+            <p>R$ 139,99</p>
+            <button onclick="adicionarAoCarrinho('Suéter Quente', 139.99)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Blusa de Manga Longa.jpg" alt="Produto 16">
+            <h2>Blusa de Manga Longa</h2>
+            <p>R$ 89,99</p>
+            <button onclick="adicionarAoCarrinho('Blusa de Manga Longa', 89.99)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="jaqueta de Couro.jpg" alt="Produto 18">
+            <h2>Jaqueta de Couro</h2>
+            <p>R$ 249,99</p>
+            <button onclick="adicionarAoCarrinho('Jaqueta de Couro', 249.99)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="blusa de seda.jpg" alt="Produto 20">
+            <h2>Blusa de Seda</h2>
+            <p>R$ 199,99</p>
+            <button onclick="adicionarAoCarrinho('Blusa de Seda', 199.99)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="blusa de alça.jpg" alt="Produto 20">
+            <h2>Blusa de Alça</h2>
+            <p>R$ 39,90</p>
+            <button onclick="adicionarAoCarrinho('blusa de alça', 39,90)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Blusa manga bufante.jpg" alt="Produto 20">
+            <h2>Blusa manga bufante</h2>
+            <p>R$ 179,90 </p>
+            <button onclick="adicionarAoCarrinho('Blusa manga bufante', 179,90 )">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Blusa listrada.jpg" alt="Produto 20">
+            <h2>Blusa listrada</h2>
+            <p>R$  73,95</p>
+            <button onclick="adicionarAoCarrinho('Blusa listrada',  73,95)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Camisas.jpg" alt="Produto 20">
+            <h2>Camisas</h2>
+            <p>R$ 51,90</p>
+            <button onclick="adicionarAoCarrinho('Camisas', 51,90)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Blusa tomara que caia.jpg" alt="Produto 20">
+            <h2>Blusa tomara que caia</h2>
+            <p>R$ 38,32</p>
+            <button onclick="adicionarAoCarrinho('Blusa tomara que caia',  38,32)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Camisa oversized.jpg" alt="Produto 20">
+            <h2>Camisa oversized</h2>
+            <p>R$ 48,00</p>
+            <button onclick="adicionarAoCarrinho('Camisa oversized',  48,99 )">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <img src="camisa social.webp" alt="Produto 20">
+            <h2>camisas sociais</h2>
+            <p>R$ 64,99</p>
+            <button onclick="adicionarAoCarrinho('camisas sociais',  64,99)">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="Blusa De Lese.webp" alt="Produto 20">
+            <h2>Blusa De Lese</h2>
+            <p>R$ 112,50</p>
+            <button onclick="adicionarAoCarrinho('Blusa De Lese', 112,50)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <img src="Blusa bordada.jpg" alt="Produto 20">
+            <h2>Blusa bordada</h2>
+            <p>R$ 67.45</p>
+            <button onclick="adicionarAoCarrinho('Blusa bordada',  67.45)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <img src="Blusa básica t-shirt.jpg" alt="Produto 20">
+            <h2>Blusa básica t-shirt</h2>
+            <p>R$ 24,99</p>
+            <button onclick="adicionarAoCarrinho('Blusa básica t-shirt',  24,99)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <img src="Blusa lisa.webp" alt="Produto 20">
+            <h2>Blusa lisa</h2>
+            <p>R$ 54,16</p>
+            <button onclick="adicionarAoCarrinho('Blusa lisa',  54,16)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <img src="Blusa florida.jpg" alt="Produto 20">
+            <h2>Blusa florida</h2>
+            <p>R$ 38,99</p>
+            <button onclick="adicionarAoCarrinho('Blusa florida',   38,99)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <img src="Camisa Sarja Mix De Tachas.jpg" alt="Produto 20">
+            <h2>Camisa Sarja Mix De Tachas</h2>
+            <p>R$  119,75</p>
+            <button onclick="adicionarAoCarrinho('Camisa Sarja Mix De Tachas',  119,75)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <img src="bory.jpg" alt="Produto 20">
+            <h2>bory</h2>
+            <p>R$ 53,54</p>
+            <button onclick="adicionarAoCarrinho('bory',  53,54)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <img src="Blusa Gola Alt.jpg" alt="Produto 20">
+            <h2>Blusa Gola Alta</h2>
+            <p>R$ 29,90</p>
+            <button onclick="adicionarAoCarrinho('Blusa Gola Alta', 29,90)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <img src="Suéter.jpg" alt="Produto 20">
+            <h2>Suéter</h2>
+            <p>R$  169,00</p>
+            <button onclick="adicionarAoCarrinho('Suéter',   169,90)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <img src="Blusa Assimétrica.jpg" alt="Produto 20">
+            <h2>Blusa Assimétrica </h2>
+            <p>R$ 22,97</p>
+            <button onclick="adicionarAoCarrinho('Blusa Assimétrica ', 22,97)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <img src="blusa de um ombro so.jpg" alt="Produto 20">
+            <h2>blusa de um ombro soa</h2>
+            <p>R$ 44,98</p>
+            <button onclick="adicionarAoCarrinho('blusa de um ombro so',44,98)">Adicionar ao Carrinho</button>
+        </div>
+
+        
+    </section>
+
+    <script>
+        function adicionarAoCarrinho(produto, preco) {
+            // Aqui você pode manter o alerta, se quiser, ou removê-lo
+            alert(`Você adicionou ${produto} ao seu carrinho! Preço: R$${preco.toFixed(2)}`);
+            
+            // Redireciona para a página carrinho.html dentro da pasta produtos
+            window.location.href = 'http://127.0.0.1:5501/carrinho%20de%20compras/carrinho2.html';  // Caminho relativo
+        }
+    </script>
+    
+    <!-- Exemplo de botão -->
+    <button onclick="adicionarAoCarrinho('Produto XYZ', 49.99)">Adicionar ao Carrinho</button>
+    
+
+
+</body>
+</html>
